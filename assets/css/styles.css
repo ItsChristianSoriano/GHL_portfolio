@@ -596,7 +596,7 @@ section.visible {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for mobile */
     gap: 2rem;
 }
 
@@ -621,6 +621,19 @@ section.visible {
     justify-content: center;
     color: white;
     font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image i {
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.project-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-content {
@@ -666,6 +679,7 @@ section.visible {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .project-link:hover {
@@ -1112,6 +1126,7 @@ footer {
     
     .tag {
         font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
     }
     
     .contact-cta {
