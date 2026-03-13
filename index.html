@@ -182,19 +182,16 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
+        .project-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
 
-        /* /////////////////// */
-.project-banner {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-}
-
-.project-image img {
-    display: block;
-}
-        /* //////////////// */
+        .project-image img {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -213,12 +210,11 @@
         <div class="nav-container">
             <div class="logo">Christian Soriano</div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -240,32 +236,32 @@
             <h1>Christian E. Soriano</h1>
             <p class="subtitle">GoHighLevel Specialist • Funnel Designer • Automation Specialist</p>
             
-       <div class="header-contact-info">
-            <div class="header-contact-item">
-                <a href="mailto:christian.soriano.pro@gmail.com" class="contact-link" style="color: white;">
-                    <i class="fas fa-envelope" style="color: white;"></i>
-                    <span style="color: white;">Email</span>
-                </a>
+            <div class="header-contact-info">
+                <div class="header-contact-item">
+                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-link" style="color: white;">
+                        <i class="fas fa-envelope" style="color: white;"></i>
+                        <span style="color: white;">Email</span>
+                    </a>
+                </div>
+                
+                <div class="header-contact-item">
+                    <a href="https://api.whatsapp.com/send?phone=639512084020" target="_blank" rel="noopener noreferrer" class="contact-link" style="color: white;">
+                        <i class="fab fa-whatsapp" style="color: white;"></i>
+                        <span style="color: white;">WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="header-contact-item">
+                    <a href="https://t.me/ian_soriano" target="_blank" rel="noopener noreferrer" class="contact-link" style="color: white;">
+                        <i class="fab fa-telegram" style="color: white;"></i>
+                        <span style="color: white;">Telegram</span>
+                    </a>
+                </div>
+                
+                <div class="contact-instruction" style="color: white; margin-top: 10px; font-size: 0.9em; font-style: italic;">
+                    Get in touch through any of these channels.
+                </div>
             </div>
-            
-            <div class="header-contact-item">
-                <a href="https://api.whatsapp.com/send?phone=639512084020" target="_blank" rel="noopener noreferrer" class="contact-link" style="color: white;">
-                    <i class="fab fa-whatsapp" style="color: white;"></i>
-                    <span style="color: white;">WhatsApp</span>
-                </a>
-            </div>
-            
-            <div class="header-contact-item">
-                <a href="https://t.me/ian_soriano" target="_blank" rel="noopener noreferrer" class="contact-link" style="color: white;">
-                    <i class="fab fa-telegram" style="color: white;"></i>
-                    <span style="color: white;">Telegram</span>
-                </a>
-            </div>
-            
-            <div class="contact-instruction" style="color: white; margin-top: 10px; font-size: 0.9em; font-style: italic;">
-                Get in touch through any of these channels.
-            </div>
-        </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <i class="fas fa-rocket"></i>
@@ -282,46 +278,306 @@
         </div>
     </header>
 
+    <!-- About Section (with integrated Skills) -->
     <section id="about">
         <div class="section-header">
             <h2>About Me</h2>
             <p>Transforming businesses through innovative GoHighLevel solutions</p>
         </div>
-                <div class="about-content">
-                <div class="about-stats">
-            <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Commitment to Quality</div>
+        <div class="about-content">
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Commitment to Quality</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Hours of Weekly Availability</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Design & Dev Tools Mastered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Days a Week Open to Inquiries</div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">40+</div>
-                <div class="stat-label">Hours of Weekly Availability</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Design & Dev Tools Mastered</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Days a Week Open to Inquiries</div>
+
+            <div class="about-text">
+                <p>I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
+                
+                <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0; font-size: 16px;">
+                    <li>Small business owners grow their online presence</li>
+                    <li>Coaches and service providers convert more leads into clients</li>
+                    <li>Businesses automate repetitive marketing tasks</li>
+                    <li>Entrepreneurs streamline their funnels and customer journey</li>
+                </ul>
+
+                <p>With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
             </div>
         </div>
 
-           <div class="about-text">
-    <p>I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
-    
-    <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;  font-size: 16px;">
-        <li>Small business owners grow their online presence</li>
-        <li>Coaches and service providers convert more leads into clients</li>
-        <li>Businesses automate repetitive marketing tasks</li>
-        <li>Entrepreneurs streamline their funnels and customer journey</li>
-    </ul>
-
-    <p>With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
-</div>
+        <!-- Technical Skills (moved inside About) -->
+        <div class="skills-wrapper">
+            <h3>Technical Skills</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>GoHighLevel Expertise</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Funnel Builder</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Automation Workflows</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>CRM Management</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Landing Pages</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 98%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Development & Design</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PHP</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>UI/UX Design</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Database Management</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>Real-world solutions that drive measurable results</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Construction Website -->
+            <div class="project-card" onclick="openModal('constructionModal')">
+                <div class="project-image">
+                    <img src="assets/b1.webp" alt="Construction Services Website Banner" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Construction Services Website</h3>
+                    <p class="project-description">A comprehensive construction company website showcasing commercial and residential services, project management, and design-build solutions with client testimonials and lead capture.</p>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Estate -->
+            <div class="project-card" onclick="openModal('realestateModal')">
+                <div class="project-image">
+                    <img src="assets/rsb.webp" alt="Real Estate Landing Page Banner" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Real Estate Landing Page</h3>
+                    <p class="project-description">Full-stack e-commerce and bartering platform with advanced user management, real-time notifications, and secure payment processing.</p>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yoga -->
+            <div class="project-card" onclick="openModal('yogaModal')">
+                <div class="project-image">
+                    <img src="assets/yogab.webp" alt="Yoga Website Banner" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Yoga Website</h3>
+                    <p class="project-description">A calming yoga website designed to capture leads through email opt-ins and allow visitors to easily book classes online.</p>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dental -->
+            <div class="project-card" onclick="openModal('dentalModal')">
+                <div class="project-image">
+                    <img src="assets/dentalb.webp" alt="Dental Services Funnel Banner" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Dental Services Funnel</h3>
+                    <p class="project-description">A modern dental website showcasing professional dental services, clinic information, and an integrated appointment booking feature for a seamless user experience.</p>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Nurturing -->
+            <div class="project-card" onclick="openModal('nurtureModal')">
+                <div class="project-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Lead Nurturing Workflow</h3>
+                    <div class="project-tags">
+                        <span class="tag">Saves time by automating follow-ups</span>
+                        <span class="tag">Increases conversion rates by keeping leads engaged</span>
+                        <span class="tag">Frees up staff to focus on high-value tasks</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appointment Reminders -->
+            <div class="project-card" onclick="openModal('appointmentModal')">
+                <div class="project-image">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Appointment Reminder System</h3>
+                    <div class="project-tags">
+                        <span class="tag">Reduces no-shows, boosting revenue</span>
+                        <span class="tag">Improves scheduling efficiency</span>
+                        <span class="tag">Enhances client satisfaction with timely reminders</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Service Follow-up -->
+            <div class="project-card" onclick="openModal('followupModal')">
+                <div class="project-image">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Post-Service Follow-up</h3>
+                    <div class="project-tags">
+                        <span class="tag">Builds a strong reputation with positive reviews</span>
+                        <span class="tag">Encourages repeat business and referrals</span>
+                        <span class="tag">Provides insights to improve service quality</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Re-engagement -->
+            <div class="project-card" onclick="openModal('reengagementModal')">
+                <div class="project-image">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Re-engagement Campaign</h3>
+                    <div class="project-tags">
+                        <span class="tag">Recovers lost revenue from lapsed customers</span>
+                        <span class="tag">Strengthens loyalty with personalized offers</span>
+                        <span class="tag">Boosts sales without extra marketing spend</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No-Show Follow-up -->
+            <div class="project-card" onclick="openModal('noshowModal')">
+                <div class="project-image">
+                    <i class="fas fa-user-clock"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">No-Show Follow-up Automation</h3>
+                    <div class="project-tags">
+                        <span class="tag">Recovers missed sales or sessions</span>
+                        <span class="tag">Keeps your calendar full with less manual chasing</span>
+                        <span class="tag">Maintains professionalism with automated follow-ups</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
     <section id="services">
         <div class="section-header">
             <h2>My Services</h2>
@@ -356,403 +612,10 @@
                 <h3>CRM Integration</h3>
                 <p>Streamline your customer relationship management with custom pipelines, automated workflows, and detailed analytics and reporting.</p>
             </div>
-            
         </div>
     </section>
 
-    <section id="skills">
-        <div class="section-header">
-            <h2>Technical Skills</h2>
-            <p>Expertise across multiple technologies and platforms</p>
-        </div>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>GoHighLevel Expertise</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Funnel Builder</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Automation Workflows</span>
-                        <span>92%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>CRM Management</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Landing Pages</span>
-                        <span>98%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 98%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Development & Design</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>JavaScript</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>PHP</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>UI/UX Design</span>
-                        <span>88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Database Management</span>
-                        <span>82%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- ///////////////////////////// -->
-
-<section id="projects">
-    <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p>Real-world solutions that drive measurable results</p>
-    </div>
-    <div class="projects-grid">
-
-        <!-- NEW PROJECT: Construction Website -->
-        <div class="project-card" onclick="openModal('constructionModal')">
-            <div class="project-image">
-                <img src="assets/b1.webp" alt="Construction Services Website Banner" loading="lazy" class="project-banner">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Construction Services Website</h3>
-                <p class="project-description">A comprehensive construction company website showcasing commercial and residential services, project management, and design-build solutions with client testimonials and lead capture.</p>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 1: Real Estate -->
-        <div class="project-card" onclick="openModal('realestateModal')">
-            <div class="project-image">
-                <img src="assets/rsb.webp" alt="Real Estate Landing Page Banner" loading="lazy" class="project-banner">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Real Estate Landing Page</h3>
-                <p class="project-description">Full-stack e-commerce and bartering platform with advanced user management, real-time notifications, and secure payment processing.</p>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3: Yoga -->
-        <div class="project-card" onclick="openModal('yogaModal')">
-            <div class="project-image">
-                <img src="assets/yogab.webp" alt="Yoga Website Banner" loading="lazy" class="project-banner">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Yoga Website</h3>
-                <p class="project-description">A calming yoga website designed to capture leads through email opt-ins and allow visitors to easily book classes online.</p>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2: Dental -->
-        <div class="project-card" onclick="openModal('dentalModal')">
-            <div class="project-image">
-                <img src="assets/dentalb.webp" alt="Dental Services Funnel Banner" loading="lazy" class="project-banner">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Dental Services Funnel</h3>
-                <p class="project-description">A modern dental website showcasing professional dental services, clinic information, and an integrated appointment booking feature for a seamless user experience.</p>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 4: Lead Nurturing -->
-        <div class="project-card" onclick="openModal('nurtureModal')">
-            <div class="project-image">
-                <i class="fas fa-seedling"></i> <!-- Nurturing icon -->
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Lead Nurturing Workflow</h3>
-                <div class="project-tags">
-                    <span class="tag">Saves time by automating follow-ups</span>
-                    <span class="tag">Increases conversion rates by keeping leads engaged</span>
-                    <span class="tag">Frees up staff to focus on high-value tasks</span>
-                </div>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 5: Appointment Reminders -->
-        <div class="project-card" onclick="openModal('appointmentModal')">
-            <div class="project-image">
-                <i class="fas fa-calendar-check"></i> <!-- Reminder/appointment icon -->
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Appointment Reminder System</h3>
-                <div class="project-tags">
-                    <span class="tag">Reduces no-shows, boosting revenue</span>
-                    <span class="tag">Improves scheduling efficiency</span>
-                    <span class="tag">Enhances client satisfaction with timely reminders</span>
-                </div>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 6: Post-Service Follow-up -->
-        <div class="project-card" onclick="openModal('followupModal')">
-            <div class="project-image">
-                <i class="fas fa-envelope-open-text"></i> <!-- Follow-up icon -->
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Post-Service Follow-up</h3>
-                <div class="project-tags">
-                    <span class="tag">Builds a strong reputation with positive reviews</span>
-                    <span class="tag">Encourages repeat business and referrals</span>
-                    <span class="tag">Provides insights to improve service quality</span>
-                </div>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 7: Re-engagement -->
-        <div class="project-card" onclick="openModal('reengagementModal')">
-            <div class="project-image">
-                <i class="fas fa-recycle"></i> <!-- Re-engagement icon -->
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Re-engagement Campaign</h3>
-                <div class="project-tags">
-                    <span class="tag">Recovers lost revenue from lapsed customers</span>
-                    <span class="tag">Strengthens loyalty with personalized offers</span>
-                    <span class="tag">Boosts sales without extra marketing spend</span>
-                </div>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 8: No-Show Follow-up -->
-        <div class="project-card" onclick="openModal('noshowModal')">
-            <div class="project-image">
-                <i class="fas fa-user-clock"></i> <!-- Missed appointment icon -->
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">No-Show Follow-up Automation</h3>
-                <div class="project-tags">
-                    <span class="tag">Recovers missed sales or sessions</span>
-                    <span class="tag">Keeps your calendar full with less manual chasing</span>
-                    <span class="tag">Maintains professionalism with automated follow-ups</span>
-                </div>
-                <div class="project-links">
-                    <span class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Click to view 
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Project Modals -->
-<div class="modal-overlay" id="realestateModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Real Estate Landing Page</h3>
-            <button class="modal-close" onclick="closeModal('realestateModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/realestate.webp" alt="Real Estate Landing Page" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="dentalModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Dental Services Funnel</h3>
-            <button class="modal-close" onclick="closeModal('dentalModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/dental1.webp" alt="Dental Services Funnel" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="yogaModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Yoga Website</h3>
-            <button class="modal-close" onclick="closeModal('yogaModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/yoga.webp" alt="Yoga Website" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<!-- NEW MODAL: Construction Website -->
-<div class="modal-overlay" id="constructionModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Construction Services Website</h3>
-            <button class="modal-close" onclick="closeModal('constructionModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/construction_website.webp" alt="Construction Services Website" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="nurtureModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Lead nurture Automation</h3>
-            <button class="modal-close" onclick="closeModal('nurtureModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/nurture.webp" alt="Lead nurture Automation" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="appointmentModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Appointment Reminder Automation</h3>
-            <button class="modal-close" onclick="closeModal('appointmentModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/appointment.webp" alt="Appointment" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="followupModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Post-Service Follow-up Automation</h3>
-            <button class="modal-close" onclick="closeModal('followupModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/followup.webp" alt="Education Funnel" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="reengagementModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Re-engagement Campaign</h3>
-            <button class="modal-close" onclick="closeModal('reengagementModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/reengagement.webp" alt="Education Funnel" class="modal-image">
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="noshowModal">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title">Re-engagement Campaign</h3>
-            <button class="modal-close" onclick="closeModal('noshowModal')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-content">
-            <img src="assets/noshow.webp" alt="Education Funnel" loading="lazy" class="modal-image">
-        </div>
-    </div>
-</div>
-<!-- ///////////////////////////// -->
-
-
-
+    <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="section-header">
             <h2>Client Testimonials</h2>
@@ -764,28 +627,23 @@
                     <i class="fas fa-quote-right"></i>
                 </div>
                 <p class="testimonial-quote">"Christian transformed our lead generation completely. Our conversion rates increased by 35% within the first month of implementing his GoHighLevel funnel system."</p>
-                <!-- <div class="testimonial-author">Sarah Martinez</div>
-                <div class="testimonial-role">Marketing Director, TechStart</div> -->
             </div>
             <div class="testimonial-card">
                 <div class="quote-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
                 <p class="testimonial-quote">"The automation workflows Christian built for us saved us 20 hours per week. His attention to detail and technical expertise are outstanding."</p>
-                <!-- <div class="testimonial-author">Mike Johnson</div>
-                <div class="testimonial-role">CEO, Growth Agency</div> -->
             </div>
             <div class="testimonial-card">
                 <div class="quote-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote">""Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
-                <!-- <div class="testimonial-author">Lisa Chen</div>
-                <div class="testimonial-role">Founder, Digital Solutions Co.</div> -->
+                <p class="testimonial-quote">"Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <div class="section-header">
             <h2>Let's Work Together</h2>
@@ -795,61 +653,160 @@
             <div class="contact-cta">
                 <h3>Get In Touch</h3>
                 <p>Have a project in mind? Let's discuss how I can help transform your business with GoHighLevel solutions. Reach out through any of the methods below.</p>
-                <!-- <a href="mailto:christian.soriano.pro@gmail.com" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Send Me an Email
-                </a> -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=christian.soriano.pro@gmail.com" 
-                   class="btn btn-primary" 
-                   target="_blank">
-                    <i class="fas fa-envelope"></i> Send Me an Email
-                </a>
-            </div>
-            
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon-lg">
+                <!-- Contact Icons Row -->
+                <div class="contact-cta-icons">
+                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-cta-icon">
                         <i class="fas fa-envelope"></i>
-                    </div>
-                    <h4>Email</h4>
-                    <p>christian.soriano.pro@gmail.com</p>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=639512084020" target="_blank" rel="noopener noreferrer" class="contact-cta-icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/ian_soriano" target="_blank" rel="noopener noreferrer" class="contact-cta-icon">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
                 </div>
-                
-                <!-- <div class="contact-method">
-                    <div class="contact-icon-lg">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h4>Phone</h4>
-                    <p>09512084020</p>
-                </div> -->
-                
-                <div class="contact-method">
-                    <div class="contact-icon-lg">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h4>Location</h4>
-                    <p>Bohol, Philippines</p>
-                </div>
-            </div>
-            
-            <!-- <div class="contact-social">
-                <h4>Connect With Me</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div> -->
             </div>
         </div>
     </section>
+
+    <!-- All Modals (placed after Contact, before Footer) -->
+    <!-- Real Estate Modal -->
+    <div class="modal-overlay" id="realestateModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Real Estate Landing Page</h3>
+                <button class="modal-close" onclick="closeModal('realestateModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/realestate.webp" alt="Real Estate Landing Page" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Dental Modal -->
+    <div class="modal-overlay" id="dentalModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Dental Services Funnel</h3>
+                <button class="modal-close" onclick="closeModal('dentalModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/dental1.webp" alt="Dental Services Funnel" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Yoga Modal -->
+    <div class="modal-overlay" id="yogaModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Yoga Website</h3>
+                <button class="modal-close" onclick="closeModal('yogaModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/yoga.webp" alt="Yoga Website" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Construction Modal -->
+    <div class="modal-overlay" id="constructionModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Construction Services Website</h3>
+                <button class="modal-close" onclick="closeModal('constructionModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/construction_website.webp" alt="Construction Services Website" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Nurture Modal -->
+    <div class="modal-overlay" id="nurtureModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Lead nurture Automation</h3>
+                <button class="modal-close" onclick="closeModal('nurtureModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/nurture.webp" alt="Lead nurture Automation" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div class="modal-overlay" id="appointmentModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Appointment Reminder Automation</h3>
+                <button class="modal-close" onclick="closeModal('appointmentModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/appointment.webp" alt="Appointment" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Follow-up Modal -->
+    <div class="modal-overlay" id="followupModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Post-Service Follow-up Automation</h3>
+                <button class="modal-close" onclick="closeModal('followupModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/followup.webp" alt="Education Funnel" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Re-engagement Modal -->
+    <div class="modal-overlay" id="reengagementModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Re-engagement Campaign</h3>
+                <button class="modal-close" onclick="closeModal('reengagementModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/reengagement.webp" alt="Education Funnel" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- No-show Modal -->
+    <div class="modal-overlay" id="noshowModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">No-Show Follow-up Automation</h3>
+                <button class="modal-close" onclick="closeModal('noshowModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/noshow.webp" alt="No-Show Follow-up" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -862,13 +819,13 @@
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Restore background scrolling
+            document.body.style.overflow = 'auto';
         }
 
         // Close modal when clicking outside
@@ -949,18 +906,22 @@
             });
         });
 
-        // Intersection Observer for animations
+        // Intersection Observer for animations and active nav highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0.3,
             rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
+                // Animation on visible
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Animate skill bars
+                    // Animate skill bars if in about section
                     const skillBars = entry.target.querySelectorAll('.skill-progress');
                     skillBars.forEach(bar => {
                         const width = bar.style.width;
@@ -969,12 +930,20 @@
                             bar.style.width = width;
                         }, 500);
                     });
+
+                    // Active nav link
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
         }, observerOptions);
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
+        sections.forEach(section => {
             observer.observe(section);
         });
 
