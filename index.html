@@ -420,8 +420,11 @@
                     <h3 class="project-title">Construction Services Website</h3>
                     <p class="project-description">A comprehensive construction company website showcasing commercial and residential services, project management, and design-build solutions with client testimonials and lead capture.</p>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('constructionModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                        <span class="project-link" onclick="openModal('workflowModal'); event.stopPropagation();">
+                            <i class="fas fa-diagram-project"></i> Workflow
                         </span>
                     </div>
                 </div>
@@ -436,7 +439,7 @@
                     <h3 class="project-title">Real Estate Landing Page</h3>
                     <p class="project-description">Full-stack e-commerce and bartering platform with advanced user management, real-time notifications, and secure payment processing.</p>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('realestateModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -452,7 +455,7 @@
                     <h3 class="project-title">Yoga Website</h3>
                     <p class="project-description">A calming yoga website designed to capture leads through email opt-ins and allow visitors to easily book classes online.</p>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('yogaModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -468,7 +471,7 @@
                     <h3 class="project-title">Dental Services Funnel</h3>
                     <p class="project-description">A modern dental website showcasing professional dental services, clinic information, and an integrated appointment booking feature for a seamless user experience.</p>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('dentalModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -488,7 +491,7 @@
                         <span class="tag">Frees up staff to focus on high-value tasks</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('nurtureModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -508,7 +511,7 @@
                         <span class="tag">Enhances client satisfaction with timely reminders</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('appointmentModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -528,7 +531,7 @@
                         <span class="tag">Provides insights to improve service quality</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('followupModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -548,7 +551,7 @@
                         <span class="tag">Boosts sales without extra marketing spend</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('reengagementModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -568,7 +571,7 @@
                         <span class="tag">Maintains professionalism with automated follow-ups</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">
+                        <span class="project-link" onclick="openModal('noshowModal'); event.stopPropagation();">
                             <i class="fas fa-external-link-alt"></i> Click to view 
                         </span>
                     </div>
@@ -672,7 +675,7 @@
         </div>
     </section>
 
-    <!-- All Modals (placed after Contact, before Footer) -->
+    <!-- All Modals -->
     <!-- Real Estate Modal -->
     <div class="modal-overlay" id="realestateModal">
         <div class="modal-container">
@@ -808,6 +811,21 @@
         </div>
     </div>
 
+    <!-- Workflow Modal (NEW) -->
+    <div class="modal-overlay" id="workflowModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Workflow Diagram</h3>
+                <button class="modal-close" onclick="closeModal('workflowModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/workflow.webp" alt="Workflow Diagram" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <p>© 2025 Christian E. Soriano. All rights reserved.</p>
@@ -910,7 +928,6 @@
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        // FIX: Use lower threshold and remove negative rootMargin for better mobile visibility
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px'
@@ -918,11 +935,9 @@
 
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
-                // Animation on visible
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Animate skill bars if in about section
                     const skillBars = entry.target.querySelectorAll('.skill-progress');
                     skillBars.forEach(bar => {
                         const width = bar.style.width;
@@ -932,7 +947,6 @@
                         }, 500);
                     });
 
-                    // Active nav link
                     const id = entry.target.getAttribute('id');
                     navLinks.forEach(link => {
                         link.classList.remove('active');
@@ -1007,7 +1021,6 @@
             });
         }
 
-        // Trigger stats animation when about section is visible
         const aboutSection = document.getElementById('about');
         const statsObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
