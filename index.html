@@ -7,6 +7,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#011f4b',
+                        'primary-light': '#03396c',
+                        'primary-dark': '#001437',
+                        'secondary': '#b3cde0',
+                        'accent': '#6497b1',
+                    }
+                }
+            },
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
     
     <!-- Internal CSS for Modal -->
     <style>
@@ -238,7 +257,7 @@
             
             <div class="header-contact-info">
                 <div class="header-contact-item">
-                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-link" style="color: white;">
+                    <a href="/cdn-cgi/l/email-protection#7f1c170d160c0b161e11510c100d161e1110510f0d103f18121e1613511c1012" class="contact-link" style="color: white;">
                         <i class="fas fa-envelope" style="color: white;"></i>
                         <span style="color: white;">Email</span>
                     </a>
@@ -285,27 +304,27 @@
             <p>Transforming businesses through innovative GoHighLevel solutions</p>
         </div>
         <div class="about-content">
-            <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Commitment to Quality</div>
+            <div class="about-stats grid grid-cols-2 gap-8">
+                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">100%</div>
+                    <div class="stat-label text-primary-light font-medium">Commitment to Quality</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Hours of Weekly Availability</div>
+                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">40+</div>
+                    <div class="stat-label text-primary-light font-medium">Hours of Weekly Availability</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Design & Dev Tools Mastered</div>
+                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">10+</div>
+                    <div class="stat-label text-primary-light font-medium">Design & Dev Tools Mastered</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Days a Week Open to Inquiries</div>
+                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">7</div>
+                    <div class="stat-label text-primary-light font-medium">Days a Week Open to Inquiries</div>
                 </div>
             </div>
 
-            <div class="about-text">
-                <p>I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
+            <div class="about-text bg-secondary rounded-[20px] p-12 border-l-4 border-primary">
+                <p class="text-[1.1rem] leading-[1.8] text-primary-light mb-6">I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
                 
                 <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0; font-size: 16px;">
                     <li>Small business owners grow their online presence</li>
@@ -314,16 +333,16 @@
                     <li>Entrepreneurs streamline their funnels and customer journey</li>
                 </ul>
 
-                <p>With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
+                <p class="text-[1.1rem] leading-[1.8] text-primary-light">With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
             </div>
         </div>
 
         <!-- Technical Skills (moved inside About) -->
-        <div class="skills-wrapper">
-            <h3>Technical Skills</h3>
+        <div class="skills-wrapper mt-16">
+            <h3 class="text-[2rem] text-center mb-8 text-primary font-['Poppins',sans-serif]">Technical Skills</h3>
             <div class="skills-container">
-                <div class="skill-category">
-                    <h3>GoHighLevel Expertise</h3>
+                <div class="skill-category bg-secondary rounded-[20px] p-10 border-l-4 border-primary">
+                    <h3 class="text-[1.5rem] font-semibold mb-8 text-primary">GoHighLevel Expertise</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Funnel Builder</span>
@@ -361,8 +380,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Development & Design</h3>
+                <div class="skill-category bg-secondary rounded-[20px] p-10 border-l-4 border-primary">
+                    <h3 class="text-[1.5rem] font-semibold mb-8 text-primary">Development & Design</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>JavaScript</span>
@@ -587,33 +606,33 @@
             <p>Comprehensive GoHighLevel solutions to accelerate your business growth</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
+            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
+                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
                     <i class="fas fa-paint-brush"></i>
                 </div>
-                <h3>Landing Page Design</h3>
-                <p>Create stunning, high-converting landing pages that capture leads and drive sales. Optimized for mobile and desktop with A/B testing capabilities.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Landing Page Design</h3>
+                <p class="text-primary-light leading-relaxed">Create stunning, high-converting landing pages that capture leads and drive sales. Optimized for mobile and desktop with A/B testing capabilities.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
+            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
+                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
                     <i class="fas fa-filter"></i>
                 </div>
-                <h3>Sales Funnel Development</h3>
-                <p>Build comprehensive sales funnels tailored to your industry with integrated payment processing, lead scoring, and conversion optimization.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Sales Funnel Development</h3>
+                <p class="text-primary-light leading-relaxed">Build comprehensive sales funnels tailored to your industry with integrated payment processing, lead scoring, and conversion optimization.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
+            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
+                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
                     <i class="fas fa-cogs"></i>
                 </div>
-                <h3>Marketing Automation</h3>
-                <p>Set up sophisticated email and SMS campaigns, lead nurturing sequences, and automated follow-ups that work 24/7 to grow your business.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Marketing Automation</h3>
+                <p class="text-primary-light leading-relaxed">Set up sophisticated email and SMS campaigns, lead nurturing sequences, and automated follow-ups that work 24/7 to grow your business.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
+            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
+                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
                     <i class="fas fa-database"></i>
                 </div>
-                <h3>CRM Integration</h3>
-                <p>Streamline your customer relationship management with custom pipelines, automated workflows, and detailed analytics and reporting.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">CRM Integration</h3>
+                <p class="text-primary-light leading-relaxed">Streamline your customer relationship management with custom pipelines, automated workflows, and detailed analytics and reporting.</p>
             </div>
         </div>
     </section>
@@ -625,23 +644,23 @@
             <p>What my clients say about working with me</p>
         </div>
         <div class="testimonials-container">
-            <div class="testimonial-card">
-                <div class="quote-icon">
+            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
+                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote">"Christian transformed our lead generation completely. Our conversion rates increased by 35% within the first month of implementing his GoHighLevel funnel system."</p>
+                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"Christian transformed our lead generation completely. Our conversion rates increased by 35% within the first month of implementing his GoHighLevel funnel system."</p>
             </div>
-            <div class="testimonial-card">
-                <div class="quote-icon">
+            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
+                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote">"The automation workflows Christian built for us saved us 20 hours per week. His attention to detail and technical expertise are outstanding."</p>
+                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"The automation workflows Christian built for us saved us 20 hours per week. His attention to detail and technical expertise are outstanding."</p>
             </div>
-            <div class="testimonial-card">
-                <div class="quote-icon">
+            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
+                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote">"Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
+                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
             </div>
         </div>
     </section>
@@ -658,7 +677,7 @@
                 <p>Have a project in mind? Let's discuss how I can help transform your business with GoHighLevel solutions. Reach out through any of the methods below.</p>
                 <!-- Contact Icons Row -->
                 <div class="contact-cta-icons">
-                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-cta-icon">
+                    <a href="/cdn-cgi/l/email-protection#dcbfb4aeb5afa8b5bdb2f2afb3aeb5bdb2b3f2acaeb39cbbb1bdb5b0f2bfb3b1" class="contact-cta-icon">
                         <i class="fas fa-envelope"></i>
                         <span>Email</span>
                     </a>
@@ -832,7 +851,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Modal Functions
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -999,6 +1018,8 @@
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
+
+    
 
         // Stats counter animation
         function animateStats() {
