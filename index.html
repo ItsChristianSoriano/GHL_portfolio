@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian E. Soriano - GoHighLevel Expert</title>
+    <title>Christian E. Soriano - GoHighLevel Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -497,6 +497,25 @@
                 </div>
             </div>
 
+            <!-- Expense Tracker PWA (right after Dental) -->
+            <div class="project-card" onclick="openModal('expenseTrackerModal')">
+                <div class="project-image">
+                    <img src="assets/expensify.webp" alt="Expense Tracker PWA Banner" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Expense Tracker PWA</h3>
+                    <p class="project-description">A Progressive Web App for personal expense tracking. Stores data locally in your browser, works offline, and can be installed on any device. Features charts, categories, dark mode, and CSV export.</p>
+                    <div class="project-links">
+                        <span class="project-link" onclick="openModal('expenseTrackerModal'); event.stopPropagation();">
+                            <i class="fas fa-external-link-alt"></i> Click to view 
+                        </span>
+                        <a href="https://expense-tracker-58rh81ppg-iansgit99s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation();">
+                            <i class="fas fa-globe"></i> View Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Lead Nurturing -->
             <div class="project-card" onclick="openModal('nurtureModal')">
                 <div class="project-image">
@@ -830,7 +849,7 @@
         </div>
     </div>
 
-    <!-- Workflow Modal (NEW) -->
+    <!-- Workflow Modal -->
     <div class="modal-overlay" id="workflowModal">
         <div class="modal-container">
             <div class="modal-header">
@@ -841,6 +860,21 @@
             </div>
             <div class="modal-content">
                 <img src="assets/workflow.webp" alt="Workflow Diagram" loading="lazy" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Expense Tracker Modal -->
+    <div class="modal-overlay" id="expenseTrackerModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Expense Tracker PWA</h3>
+                <button class="modal-close" onclick="closeModal('expenseTrackerModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <img src="assets/expensetracker.webp" alt="Expense Tracker PWA Screenshot" loading="lazy" class="modal-image">
             </div>
         </div>
     </div>
@@ -1018,8 +1052,6 @@
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
-
-    
 
         // Stats counter animation
         function animateStats() {
