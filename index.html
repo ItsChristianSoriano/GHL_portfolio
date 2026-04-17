@@ -3,31 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian E. Soriano - GoHighLevel Specialist</title>
+    <title>Christian E. Soriano - GoHighLevel Expert</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#011f4b',
-                        'primary-light': '#03396c',
-                        'primary-dark': '#001437',
-                        'secondary': '#b3cde0',
-                        'accent': '#6497b1',
-                    }
-                }
-            },
-            corePlugins: {
-                preflight: false,
-            }
-        }
-    </script>
     
-    <!-- Internal CSS for Modal -->
+    <!-- Internal CSS for Modal & new project adjustments -->
     <style>
         .modal-overlay {
             position: fixed;
@@ -169,36 +150,24 @@
             background: linear-gradient(135deg, #5a6de8, #6a4499);
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .modal-container {
-                max-width: 95vw;
-                max-height: 95vh;
-                margin: 10px;
-            }
-
-            .modal-header {
-                padding: 15px 20px;
-            }
-
-            .modal-title {
-                font-size: 1.3rem;
-            }
-
-            .modal-description {
-                padding: 20px;
-            }
-        }
-
-        /* Project card cursor pointer */
-        .project-card {
+        /* Project card cursor pointer only for modal-trigger cards */
+        .project-card[data-modal] {
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project-card:hover {
+        .project-card[data-modal]:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Cards without modal (live links) keep normal hover but no pointer */
+        .project-card:not([data-modal]) {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:not([data-modal]):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .project-banner {
@@ -210,6 +179,48 @@
 
         .project-image img {
             display: block;
+        }
+
+        /* View Live button style */
+        .btn-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .btn-live i {
+            font-size: 0.9rem;
+        }
+        .btn-live:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .modal-container {
+                max-width: 95vw;
+                max-height: 95vh;
+                margin: 10px;
+            }
+            .modal-header {
+                padding: 15px 20px;
+            }
+            .modal-title {
+                font-size: 1.3rem;
+            }
+            .modal-description {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -257,7 +268,7 @@
             
             <div class="header-contact-info">
                 <div class="header-contact-item">
-                    <a href="/cdn-cgi/l/email-protection#7f1c170d160c0b161e11510c100d161e1110510f0d103f18121e1613511c1012" class="contact-link" style="color: white;">
+                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-link" style="color: white;">
                         <i class="fas fa-envelope" style="color: white;"></i>
                         <span style="color: white;">Email</span>
                     </a>
@@ -304,27 +315,27 @@
             <p>Transforming businesses through innovative GoHighLevel solutions</p>
         </div>
         <div class="about-content">
-            <div class="about-stats grid grid-cols-2 gap-8">
-                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
-                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">100%</div>
-                    <div class="stat-label text-primary-light font-medium">Commitment to Quality</div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Commitment to Quality</div>
                 </div>
-                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
-                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">40+</div>
-                    <div class="stat-label text-primary-light font-medium">Hours of Weekly Availability</div>
+                <div class="stat-card">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Hours of Weekly Availability</div>
                 </div>
-                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
-                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">10+</div>
-                    <div class="stat-label text-primary-light font-medium">Design & Dev Tools Mastered</div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Design & Dev Tools Mastered</div>
                 </div>
-                <div class="stat-card bg-accent rounded-[20px] p-8 text-center transition-transform duration-300 hover:-translate-y-[5px]">
-                    <div class="stat-number text-[2.5rem] font-bold text-primary mb-2">7</div>
-                    <div class="stat-label text-primary-light font-medium">Days a Week Open to Inquiries</div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Days a Week Open to Inquiries</div>
                 </div>
             </div>
 
-            <div class="about-text bg-secondary rounded-[20px] p-12 border-l-4 border-primary">
-                <p class="text-[1.1rem] leading-[1.8] text-primary-light mb-6">I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
+            <div class="about-text">
+                <p>I build <strong>high-converting websites, landing pages, and sales funnels using GoHighLevel</strong> to help businesses generate more leads and sales.</p>
                 
                 <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0; font-size: 16px;">
                     <li>Small business owners grow their online presence</li>
@@ -333,16 +344,16 @@
                     <li>Entrepreneurs streamline their funnels and customer journey</li>
                 </ul>
 
-                <p class="text-[1.1rem] leading-[1.8] text-primary-light">With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
+                <p>With a background in <strong>software engineering</strong>, I create <strong>conversion-focused and scalable funnel systems</strong> that support long-term business growth.</p>
             </div>
         </div>
 
         <!-- Technical Skills (moved inside About) -->
-        <div class="skills-wrapper mt-16">
-            <h3 class="text-[2rem] text-center mb-8 text-primary font-['Poppins',sans-serif]">Technical Skills</h3>
+        <div class="skills-wrapper">
+            <h3>Technical Skills</h3>
             <div class="skills-container">
-                <div class="skill-category bg-secondary rounded-[20px] p-10 border-l-4 border-primary">
-                    <h3 class="text-[1.5rem] font-semibold mb-8 text-primary">GoHighLevel Expertise</h3>
+                <div class="skill-category">
+                    <h3>GoHighLevel Expertise</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Funnel Builder</span>
@@ -380,8 +391,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category bg-secondary rounded-[20px] p-10 border-l-4 border-primary">
-                    <h3 class="text-[1.5rem] font-semibold mb-8 text-primary">Development & Design</h3>
+                <div class="skill-category">
+                    <h3>Development & Design</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>JavaScript</span>
@@ -423,15 +434,81 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (Updated with Velocity, GymBro, Expensify first) -->
     <section id="projects">
         <div class="section-header">
             <h2>Featured Projects</h2>
             <p>Real-world solutions that drive measurable results</p>
         </div>
         <div class="projects-grid">
+            
+            <!-- 1. Velocity Motors (Live link, no modal) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/Velocity-preview.webp" alt="Velocity Motors Preview" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Velocity Motors</h3>
+                    <p class="project-description">Modern car dealership platform with sleek inventory display, vehicle filtering, and lead capture. Built for performance and conversion.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://velocity-motors-one.vercel.app/#" target="_blank" rel="noopener noreferrer" class="btn-live">
+                            <i class="fas fa-external-link-alt"></i> View Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. GymBro (Live link, no modal) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/gymbro-preview.webp" alt="GymBro Fitness Website Preview" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">GymBro</h3>
+                    <p class="project-description">Fitness & gym membership website with class schedules, trainer profiles, and membership sign-up flows. Optimized for lead generation.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Tailwind</span>
+                        <span class="tag">Fitness</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://gymbro-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-live">
+                            <i class="fas fa-external-link-alt"></i> View Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Expensify (Live link, no modal, preview updated) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/expensify-preview.webp" alt="Expensify Expense Tracker Preview" loading="lazy" class="project-banner">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Expensify</h3>
+                    <p class="project-description">Smart expense tracking dashboard with visual reports, category management, and budget insights. Clean UI for financial clarity.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Chart.js</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-live">
+                            <i class="fas fa-external-link-alt"></i> View Live
+                        </a>
+                        <!-- Note: Expensify link placeholder; update href when available -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing projects follow (modal-based) -->
             <!-- Construction Website -->
-            <div class="project-card" onclick="openModal('constructionModal')">
+            <div class="project-card" data-modal onclick="openModal('constructionModal')">
                 <div class="project-image">
                     <img src="assets/b1.webp" alt="Construction Services Website Banner" loading="lazy" class="project-banner">
                 </div>
@@ -450,7 +527,7 @@
             </div>
 
             <!-- Real Estate -->
-            <div class="project-card" onclick="openModal('realestateModal')">
+            <div class="project-card" data-modal onclick="openModal('realestateModal')">
                 <div class="project-image">
                     <img src="assets/rsb.webp" alt="Real Estate Landing Page Banner" loading="lazy" class="project-banner">
                 </div>
@@ -466,7 +543,7 @@
             </div>
 
             <!-- Yoga -->
-            <div class="project-card" onclick="openModal('yogaModal')">
+            <div class="project-card" data-modal onclick="openModal('yogaModal')">
                 <div class="project-image">
                     <img src="assets/yogab.webp" alt="Yoga Website Banner" loading="lazy" class="project-banner">
                 </div>
@@ -482,7 +559,7 @@
             </div>
 
             <!-- Dental -->
-            <div class="project-card" onclick="openModal('dentalModal')">
+            <div class="project-card" data-modal onclick="openModal('dentalModal')">
                 <div class="project-image">
                     <img src="assets/dentalb.webp" alt="Dental Services Funnel Banner" loading="lazy" class="project-banner">
                 </div>
@@ -497,27 +574,8 @@
                 </div>
             </div>
 
-            <!-- Expense Tracker PWA (right after Dental) -->
-            <div class="project-card" onclick="openModal('expenseTrackerModal')">
-                <div class="project-image">
-                    <img src="assets/expensify.webp" alt="Expense Tracker PWA Banner" loading="lazy" class="project-banner">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Expense Tracker PWA</h3>
-                    <p class="project-description">A Progressive Web App for personal expense tracking. Stores data locally in your browser, works offline, and can be installed on any device. Features charts, categories, dark mode, and CSV export.</p>
-                    <div class="project-links">
-                        <span class="project-link" onclick="openModal('expenseTrackerModal'); event.stopPropagation();">
-                            <i class="fas fa-external-link-alt"></i> Click to view 
-                        </span>
-                        <a href="https://expense-tracker-58rh81ppg-iansgit99s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation();">
-                            <i class="fas fa-globe"></i> View Live
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Lead Nurturing -->
-            <div class="project-card" onclick="openModal('nurtureModal')">
+            <div class="project-card" data-modal onclick="openModal('nurtureModal')">
                 <div class="project-image">
                     <i class="fas fa-seedling"></i>
                 </div>
@@ -537,7 +595,7 @@
             </div>
 
             <!-- Appointment Reminders -->
-            <div class="project-card" onclick="openModal('appointmentModal')">
+            <div class="project-card" data-modal onclick="openModal('appointmentModal')">
                 <div class="project-image">
                     <i class="fas fa-calendar-check"></i>
                 </div>
@@ -557,7 +615,7 @@
             </div>
 
             <!-- Post-Service Follow-up -->
-            <div class="project-card" onclick="openModal('followupModal')">
+            <div class="project-card" data-modal onclick="openModal('followupModal')">
                 <div class="project-image">
                     <i class="fas fa-envelope-open-text"></i>
                 </div>
@@ -577,7 +635,7 @@
             </div>
 
             <!-- Re-engagement -->
-            <div class="project-card" onclick="openModal('reengagementModal')">
+            <div class="project-card" data-modal onclick="openModal('reengagementModal')">
                 <div class="project-image">
                     <i class="fas fa-recycle"></i>
                 </div>
@@ -597,7 +655,7 @@
             </div>
 
             <!-- No-Show Follow-up -->
-            <div class="project-card" onclick="openModal('noshowModal')">
+            <div class="project-card" data-modal onclick="openModal('noshowModal')">
                 <div class="project-image">
                     <i class="fas fa-user-clock"></i>
                 </div>
@@ -625,33 +683,33 @@
             <p>Comprehensive GoHighLevel solutions to accelerate your business growth</p>
         </div>
         <div class="services-grid">
-            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
-                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
+            <div class="service-card">
+                <div class="service-icon">
                     <i class="fas fa-paint-brush"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Landing Page Design</h3>
-                <p class="text-primary-light leading-relaxed">Create stunning, high-converting landing pages that capture leads and drive sales. Optimized for mobile and desktop with A/B testing capabilities.</p>
+                <h3>Landing Page Design</h3>
+                <p>Create stunning, high-converting landing pages that capture leads and drive sales. Optimized for mobile and desktop with A/B testing capabilities.</p>
             </div>
-            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
-                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
+            <div class="service-card">
+                <div class="service-icon">
                     <i class="fas fa-filter"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Sales Funnel Development</h3>
-                <p class="text-primary-light leading-relaxed">Build comprehensive sales funnels tailored to your industry with integrated payment processing, lead scoring, and conversion optimization.</p>
+                <h3>Sales Funnel Development</h3>
+                <p>Build comprehensive sales funnels tailored to your industry with integrated payment processing, lead scoring, and conversion optimization.</p>
             </div>
-            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
-                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
+            <div class="service-card">
+                <div class="service-icon">
                     <i class="fas fa-cogs"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Marketing Automation</h3>
-                <p class="text-primary-light leading-relaxed">Set up sophisticated email and SMS campaigns, lead nurturing sequences, and automated follow-ups that work 24/7 to grow your business.</p>
+                <h3>Marketing Automation</h3>
+                <p>Set up sophisticated email and SMS campaigns, lead nurturing sequences, and automated follow-ups that work 24/7 to grow your business.</p>
             </div>
-            <div class="service-card bg-white rounded-[20px] p-10 shadow-md border border-secondary relative overflow-hidden transition-all duration-300">
-                <div class="service-icon w-[60px] h-[60px] rounded-[15px] flex items-center justify-center text-white text-2xl mb-6" style="background: var(--gradient)">
+            <div class="service-card">
+                <div class="service-icon">
                     <i class="fas fa-database"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4 text-primary">CRM Integration</h3>
-                <p class="text-primary-light leading-relaxed">Streamline your customer relationship management with custom pipelines, automated workflows, and detailed analytics and reporting.</p>
+                <h3>CRM Integration</h3>
+                <p>Streamline your customer relationship management with custom pipelines, automated workflows, and detailed analytics and reporting.</p>
             </div>
         </div>
     </section>
@@ -663,23 +721,23 @@
             <p>What my clients say about working with me</p>
         </div>
         <div class="testimonials-container">
-            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
-                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
+            <div class="testimonial-card">
+                <div class="quote-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"Christian transformed our lead generation completely. Our conversion rates increased by 35% within the first month of implementing his GoHighLevel funnel system."</p>
+                <p class="testimonial-quote">"Christian transformed our lead generation completely. Our conversion rates increased by 35% within the first month of implementing his GoHighLevel funnel system."</p>
             </div>
-            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
-                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
+            <div class="testimonial-card">
+                <div class="quote-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"The automation workflows Christian built for us saved us 20 hours per week. His attention to detail and technical expertise are outstanding."</p>
+                <p class="testimonial-quote">"The automation workflows Christian built for us saved us 20 hours per week. His attention to detail and technical expertise are outstanding."</p>
             </div>
-            <div class="testimonial-card bg-white p-10 rounded-[20px] shadow-md text-center relative">
-                <div class="quote-icon absolute -top-[10px] left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white" style="background: var(--gradient)">
+            <div class="testimonial-card">
+                <div class="quote-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                <p class="testimonial-quote text-[1.1rem] text-primary-light leading-relaxed mb-8 italic">"Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
+                <p class="testimonial-quote">"Christian took the time to understand our business and delivered a funnel that actually brought in leads. The process was smooth, and the results spoke for themselves."</p>
             </div>
         </div>
     </section>
@@ -696,7 +754,7 @@
                 <p>Have a project in mind? Let's discuss how I can help transform your business with GoHighLevel solutions. Reach out through any of the methods below.</p>
                 <!-- Contact Icons Row -->
                 <div class="contact-cta-icons">
-                    <a href="/cdn-cgi/l/email-protection#dcbfb4aeb5afa8b5bdb2f2afb3aeb5bdb2b3f2acaeb39cbbb1bdb5b0f2bfb3b1" class="contact-cta-icon">
+                    <a href="mailto:christian.soriano.pro@gmail.com" class="contact-cta-icon">
                         <i class="fas fa-envelope"></i>
                         <span>Email</span>
                     </a>
@@ -713,7 +771,7 @@
         </div>
     </section>
 
-    <!-- All Modals -->
+    <!-- All Modals (unchanged) -->
     <!-- Real Estate Modal -->
     <div class="modal-overlay" id="realestateModal">
         <div class="modal-container">
@@ -864,28 +922,13 @@
         </div>
     </div>
 
-    <!-- Expense Tracker Modal -->
-    <div class="modal-overlay" id="expenseTrackerModal">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3 class="modal-title">Expense Tracker PWA</h3>
-                <button class="modal-close" onclick="closeModal('expenseTrackerModal')">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-content">
-                <img src="assets/expensetracker.webp" alt="Expense Tracker PWA Screenshot" loading="lazy" class="modal-image">
-            </div>
-        </div>
-    </div>
-
     <footer>
         <div class="footer-content">
             <p>© 2025 Christian E. Soriano. All rights reserved.</p>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Modal Functions
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -969,7 +1012,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     if (navMenu.classList.contains('active')) {
                         toggleMenu();
                     }
@@ -1042,7 +1084,7 @@
             });
         });
 
-        // Add hover effects to cards (excluding project cards as they now have onclick)
+        // Add hover effects to cards (excluding project cards with data-modal we handle separately)
         document.querySelectorAll('.service-card, .testimonial-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
